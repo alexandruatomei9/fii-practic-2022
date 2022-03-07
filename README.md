@@ -1,8 +1,8 @@
 # Fii Practic 2022
 
-##Enterprise applications with Spring
+## Enterprise applications with Spring
 
-###Training Agenda
+### Training Agenda
 
 ``` 
 Week1 - Enterprise applications - starting toolbox.
