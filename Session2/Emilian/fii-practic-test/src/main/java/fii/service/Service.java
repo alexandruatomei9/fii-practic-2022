@@ -3,11 +3,7 @@ package fii.service;
 import fii.model.User;
 import fii.service.interfaces.IValidator;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
 
-@Component
-@Scope
 @org.springframework.stereotype.Service
 public class Service {
 
