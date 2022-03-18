@@ -3,6 +3,7 @@ package ro.info.iasi.fiipractic.service;
 import ro.info.iasi.fiipractic.model.User;
 
 import java.util.List;
+import java.util.Map;
 
 public interface UserService {
 
@@ -10,5 +11,11 @@ public interface UserService {
 
     void registerUser(User user);
 
-    User getUserById(String id);
+    void updateUser(Integer id, User user);
+
+    void patchUser(Integer id, Map<String, String> user);
+
+    void deleteUser(Integer id);
+
+    User getUserById(Integer id);
 }

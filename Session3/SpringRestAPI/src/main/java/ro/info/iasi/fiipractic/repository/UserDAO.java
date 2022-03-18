@@ -28,7 +28,15 @@ public class UserDAO {
         return jdbcTemplate.update("INSERT INTO USER(FIRST_NAME, LAST_NAME, EMAIL, PASSWORD) VALUES (?, ?, ?, ?)", firstName, lastName, email, password);
     }
 
-    public User getUserById(String id) {
+    public int updateUser(String firstName, String  lastName, String email, String password, Integer id) {
+        return jdbcTemplate.update("UPDATE USER SET FIRST_NAME = ?, LAST_NAME = ?, EMAIL = ?, PASSWORD = ? WHERE ID = ?", firstName, lastName, email, password, id);
+    }
+
+    public int deleteUser(int id) {
+        return jdbcTemplate.update("DELETE FROM USER WHERE ID = ?", id);
+    }
+
+    public User getUserById(Integer id) {
         try {
             return jdbcTemplate.queryForObject("SELECT * FROM USER WHERE ID = ?", new UserRowMapper(), id);
         } catch (EmptyResultDataAccessException ex) {

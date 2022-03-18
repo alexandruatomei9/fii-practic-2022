@@ -1,14 +1,20 @@
 package ro.info.iasi.fiipractic.model;
 
+import org.springframework.lang.NonNull;
+
 public class User {
+
+    @NonNull
     private int id;
 
     private String firstName;
 
     private String lastName;
 
+    @NonNull
     private String email;
 
+    @NonNull
     private String password;
 
     public int getId() {

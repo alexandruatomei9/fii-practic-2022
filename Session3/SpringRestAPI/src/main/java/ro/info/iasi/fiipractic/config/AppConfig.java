@@ -25,10 +25,13 @@ public class AppConfig {
     @Value( "${db.password}" )
     private String dbPassword;
 
+    @Value( "${db.driverClassName}" )
+    private String dbDriverClassName;
+
     @Bean
     public DataSource mysqlDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+        dataSource.setDriverClassName(dbDriverClassName);
         dataSource.setUrl(url);
         dataSource.setUsername(dbUsername);
         dataSource.setPassword(dbPassword);
