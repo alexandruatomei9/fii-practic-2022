@@ -8,17 +8,13 @@ import ro.info.iasi.fiipractic.exception.UserNotFoundException;
 import ro.info.iasi.fiipractic.model.User;
 import ro.info.iasi.fiipractic.repository.mapper.UserRowMapper;
 
-import javax.sql.DataSource;
 import java.util.List;
 
 @Repository
 public class UserDAO {
-    private JdbcTemplate jdbcTemplate;
 
     @Autowired
-    public void setDataSource(final DataSource dataSource) {
-        jdbcTemplate = new JdbcTemplate(dataSource);
-    }
+    private JdbcTemplate jdbcTemplate;
 
     public List<User> getAllUsers() {
         return jdbcTemplate.query("SELECT * FROM USER", new UserRowMapper());
