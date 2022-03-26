@@ -1,0 +1,9 @@
+## DataSource properties
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fii_practic?currentSchema=schema
+    username: drawback
+    password: drawback
+
+my:
+  variable: value999
