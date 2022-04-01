@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="exchange-prod" />
+      <option name="name" value="MuleSoft Exchange Productive Environment" />
+      <option name="url" value="https://maven.anypoint.mulesoft.com/api/v1/organizations/68ef9520-24e9-4cf2-b2f5-620025690913/maven" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="mule-ci-releases" />
+      <option name="name" value="Nexus CI Releases" />
+      <option name="url" value="https://repository-master.mulesoft.org/nexus/content/repositories/ci-releases/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="mule-ci-snapshots" />
+      <option name="name" value="Nexus CI Snapshots" />
+      <option name="url" value="https://repository-master.mulesoft.org/nexus/content/repositories/ci-snapshots/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="nexus-third-party" />
+      <option name="name" value="Nexus Third Party Dependencies" />
+      <option name="url" value="https://repository-master.mulesoft.org/nexus/content/repositories/thirdparty/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="exchange-prod-eu" />
+      <option name="name" value="MuleSoft Exchange Productive Environment" />
+      <option name="url" value="https://maven.eu1.anypoint.mulesoft.com/api/v1/organizations/e0b4a150-f59b-46d4-ad25-5d98f9deb24a/maven" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="mulesoft-private" />
+      <option name="name" value="Local repository for thirdparty" />
+      <option name="url" value="https://repository-master.mulesoft.org/nexus/content/repositories/private/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="mule-releases" />
+      <option name="name" value="Nexus Public Releases" />
+      <option name="url" value="https://repository-master.mulesoft.org/nexus/content/repositories/releases/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="mule-snapshots" />
+      <option name="name" value="Nexus Public Releases" />
+      <option name="url" value="https://repository-master.mulesoft.org/nexus/content/repositories/snapshots/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="mule-releases-ee" />
+      <option name="name" value="Nexus EE Releases" />
+      <option name="url" value="https://repository-master.mulesoft.org/nexus/content/repositories/releases-ee/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="exchange-qax" />
+      <option name="name" value="MuleSoft Exchange QAX Environment" />
+      <option name="url" value="https://maven.qax.anypoint.mulesoft.com/api/v1/organizations/68ef9520-24e9-4cf2-b2f5-620025690913/maven" />
+    </remote-repository>
+  </component>
+</project>
