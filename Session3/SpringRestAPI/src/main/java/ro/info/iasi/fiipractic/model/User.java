@@ -9,6 +9,9 @@ public class User {
 
     private String firstName;
 
+    // added for test purposes only - argument matchers
+    private String middleName;
+
     private String lastName;
 
     @NonNull
@@ -31,6 +34,14 @@ public class User {
 
     public void setFirstName(final String firstName) {
         this.firstName = firstName;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
     }
 
     public String getLastName() {

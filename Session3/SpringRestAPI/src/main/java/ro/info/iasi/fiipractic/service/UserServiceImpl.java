@@ -1,10 +1,10 @@
 package ro.info.iasi.fiipractic.service;
 
-import com.mysql.cj.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ro.info.iasi.fiipractic.model.User;
 import ro.info.iasi.fiipractic.repository.UserDAO;
+import ro.info.iasi.fiipractic.util.UserUtil;
 
 import java.util.List;
 import java.util.Map;
@@ -12,8 +12,14 @@ import java.util.Map;
 @Service
 public class UserServiceImpl implements UserService {
 
+    private final UserDAO userRepository;
+    private final UserUtil userUtil;
+
     @Autowired
-    private UserDAO userRepository;
+    public UserServiceImpl(UserDAO userRepository, UserUtil userUtil) {
+        this.userRepository = userRepository;
+        this.userUtil = userUtil;
+    }
 
     public List<User> getAllUsers() {
         return userRepository.getAllUsers();
@@ -33,7 +39,7 @@ public class UserServiceImpl implements UserService {
     public void patchUser(Integer id, Map<String, String> partialUser) {
         User user = userRepository.getUserById(id);
 
-        patchUser(partialUser, user);
+        userUtil.patchUser(user, partialUser);
 
         userRepository.updateUser(user.getFirstName(), user.getLastName(), user.getEmail(), user.getPassword(), id);
     }
@@ -46,25 +52,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public User getUserById(Integer id) {
         return userRepository.getUserById(id);
-    }
-
-    private void patchUser(Map<String, String> partialUser, User user) {
-        String firstName = partialUser.get("firstName");
-        String lastName = partialUser.get("lastName");
-        String email = partialUser.get("email");
-        String password = partialUser.get("password");
-        if(!StringUtils.isNullOrEmpty(firstName)) {
-            user.setFirstName(firstName);
-        }
-        if(!StringUtils.isNullOrEmpty(lastName)) {
-            user.setLastName(lastName);
-        }
-        if(!StringUtils.isNullOrEmpty(email)) {
-            user.setEmail(email);
-        }
-        if(!StringUtils.isNullOrEmpty(password)) {
-            user.setPassword(password);
-        }
     }
 
 }
