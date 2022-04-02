@@ -1,7 +1,9 @@
 package ro.info.iasi.fiipractic.config;
 
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+@Configuration
 public class FrontControllerConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
 
     @Override
